@@ -1,0 +1,455 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=decice-width, initial-scale= 1.0">
+        <link rel="stylesheet" href="webstyles.css">
+    </head>
+    <title>site practice</title>
+    <body id="body">
+        <div class="header">
+            <div class="left-section">
+                <button class="ham-but" onclick="collapseSideBar()" title="Dropdown Menu">
+                    <img src="image/hamburger-icon.png" class="img-ham-but" >
+                </button>
+                <button class="youtube-but">
+                   <a href="https://www.youtube.com/home" target="_blank">
+                     <img src="image/youtube-icon-logo.png" class="img-youtube-but">
+                     </a>
+                </button>
+            </div>
+            <div class="middle-section">
+                <input type="text" placeholder="Search" class="search-box">
+                <button class="Search-button">
+                    <img src="image/search-icon.png" class="img-Search-button">
+                </button>
+                <button class="voice-search-button">
+                    <img src="image/voice-icon.png" class="img-voice-search-button">
+                </button>
+            </div>
+            <div class="right-section">
+                <button class="upload-button">
+                    <img src="image/upload-icon.png" class="img-upload-button">
+                </button>
+                <button class="grid-button">
+                    <img src="image/grid-icon.png" class="img-grid-button">
+                </button>
+                <button class="notification-button">
+                    <img src="image/notification-icon.png" class="img-notification-button">
+                  <!-- <p class="notification-number">18</p> -->
+                </button>
+                <img src="image/beauty.jpg" class="channel-profile-pic">
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <button class="but-1" title="home">
+                <a href="https://www.youtube.com/home">
+                    <img  src="image/home-icon.jpg" style="height:50px;width:50px;margin-bottom: 0px;margin-top:10px;">
+                </a>
+                <p style="font-weight:bold;margin-top: 0px;font-size: 15px;">Home</p>
+            </button>
+            <button class="exit-sidebar-button" onclick="exitSidebar()" title="Exit">X</button>
+            <button class="but-2" title="explore">
+                <a href="https://www.youtube.com/explore">
+                    <img  src="image/explore-icon.jpg" style="height:50px;width:50px;margin-bottom: 0px;margin-top:10px;">
+                </a>
+                <p style="font-weight:bold;margin-top: 0px;font-size: 15px;">explore</p>
+            </button>
+            <button class="but-3" title="subscriptions">
+                <a href="https://www.youtube.com/subscriptions">
+                    <img  src="image/subscriptions-icon.webp" style="height:50px;width:50px;margin-bottom: 0px;margin-top:10px;">
+                </a>
+                <p style="font-weight:bold;margin-top: 0px;font-size: 15px;">subscriptions</p>
+            </button>
+            <button class="but-4" title="Originals">
+                <img  src="image/originals-icon.webp" style="height:50px;width:50px;margin-bottom: 0px;margin-top:10px;">
+                <p style="font-weight:bold;margin-top: 0px;font-size: 15px;">Originals</p>
+            </button>
+            <button class="but-5" title="YT-music">
+                <img  src="image/you-tube-icon.png" style="height:50px;width:50px;margin-bottom: 0px;margin-top:10px;">
+                <p style="font-weight:bold;margin-top: 0px;font-size: 15px;">youtube music</p>
+            </button>
+            <button class="but-6" title="library">
+                <img  src="image/library-icon.png" style="height:50px;width:50px;margin-bottom: 0px;margin-top:10px;">
+                <p style="font-weight:bold;margin-top: 0px;font-size: 15px;">library</p>
+            </button>
+        </div> 
+            <div class="container">
+                <div class="div-1">
+                    <div style="
+                    display:block;height:60%;border: 1px solid black;width: 100%;position: relative;margin-bottom: 5px;
+                    ">
+                        <img src="data:image/jpeg;base64,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" style="
+                        height:100%;width:100%;
+                        " alt="couldn't load image">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;position:relative;
+                    ">
+                        <img src="data:image/jpeg;base64,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" style="
+                        height:100%;width:100%;
+                        ">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                    <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                        height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                        "></div>
+                    <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                    <p style="
+                    font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                    ">This is the name of the video</p>
+                    <p style="
+                    margin-top:0px;margin-bottom:5px;
+                    ">33M views . 2 years ago</p>
+                    <p style="
+                    margin-top: 0px;margin-bottom: 0px;
+                    ">Kalu Henry</p>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    position: relative;
+                    ">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFRgVFRUYGRgYGBkaGBgYGBgYGBkYGBgZGRgYGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDszPy40NTEBDAwMEA8QGhISHjQrJCM0NDQ0NDQ0NTQ0NjQ0NDUxNDQ0NDQ0MTQ0NDQ0NDUxNDQ0MTQ0NDQ0NDY0NDQ0NDQ0NP/AABEIAKgBKwMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAADAAECBAUGB//EADwQAAICAQMBBQUGBQIGAwAAAAECABEDBBIhMQUiQVFhBhNxgZEyobHB0fAHFCNC8VJyM2KCkrLhFUPC/8QAGQEAAgMBAAAAAAAAAAAAAAAAAAECAwQF/8QAKREAAgICAgIBAQkBAAAAAAAAAAECEQMhEjEEQVEiMkJhcYGRsdHwBf/aAAwDAQACEQMRAD8A8tUQqpEiSwmOZ3ICCJOh9ll78x0xkkACyeAJ6F7LexuTh2cKSPs0ePncrlLROCdnW9nDuiaIEjg0DIKMKyVKi5kKijmMYwHEeMIoAKKc72z7Z6TTsULnJkFj3eIb23D+01wp9CZx3bX8QMjgoihOSNiMd9cVvcgBT17q3yOSPGcccmRckjtu2fa3SaYlXybnH9iAu/I4uuFv1mFk9vGf/gaRmo8nLlx4hRAK8MeLv7vXjzp9Q1bnKIlkbVTeT4/ZJ9fE1zFpsGPJbnGAo47zLdnoSqovr+hlyxxSIcm2ejD2/VADm07qp43Y8mLLzRoUreNN9J03ZfbGHUJvRmqwO8rKSxJFCxR5B6HwnjOTtOnZAF90i0qchbXgONtEn7Z5PN830ljB7TahEQY2CU5c7VUd4/L8ZGePWiUZK9ntzCpEzivZz21xlEx5+Dtref8AVf8AcR4EEc11udboO0k1G7ZRCk1VdAB9rxBJvj0lLtdk+PtBXld5YeV3iIlV+staeVm6y1p40BbEUQijAUeNFABRRRQAUiZKKAECJGTMiRGANoNhCtINAADiBcSwwgXEaEyswg6hnEHGI8aRZaxpIIktpjibIKLN72M0AfOGI+wL+fhPZtFiCqBPG/ZjMUe1/wAz1Hs3tgEAMPnKm97NEYvjo3SJTzqI7awSrl1QPjBsEmM0jHDXGMBUMWoWeg5JPSp5j7W+1mTUM2HSvswKdr5VIDZCQdwQ/wCj1HJ69J0v8QtWyaYIrhRkfa9GnOMKxcJ5XSgnyYzygajgtR29EUUAA17FHNgn7RPUAKPGX4o3tlcpVoNnf3a7E7oP2ivLv1BBJ6DzN+ngZnDUqguvgBVX6GySPxrwg8+YljZtmvceeB5A30gHNkAk8/HgAeA85oSK2GfIz0W5JJq/AeH+JYx4jW4EgLR8RZvivnUBibvX9PPjpLOcHaWarNCgfWDGkLSJvcAm9xszscOkxgDgeE5Lsn/iL+v5Tq0UyEmTgtF/T6XEAe6OfSLRgafIuTGao8jwPmCPhcDjS42VTK209Fyi1s9E0+qXKgdSCD1rwPiP35yDzg+yO1G07g8lDw6+BH6jwP6md4XVgGU2pFqfMHkGUtUJqiu8saeVnPMsacxIRcBjyIikiJKKKNcAHijXFcAHkZKKAEYxjxowIGQYQhkGgANoBxDtBNACs4gqh3EHUkRPKlwy0mKHTDLSYPSQci9RQXsfHTTstKeJzXZ2OjOhwPKZO2WqqLbufOSwZJXd4yPzBMTRuYnhS0o6bJOX9vfaVcWN9PjN5XXv90sER+7RI6MxIAB8/hJwTk6RTJ0rOI9su2/5nUswN4kJVASpUon22HgNzAfIDzmBqMlDnqLF8VuNbyPuHHEggo3x6ceCcn15avpA6nkhR8Lr6nnnrc3xSSpGZu3ZHH5+fJ+XSRK94Hrfx8/0kr8KHJ8fIfsxV3gf35RiLOLFR54vxAv4S1r0AQEXya+7r+/ONpnBIHWvzlntReEXzb9P1ld7LUlxF2IP61Hy/IffOsR0HVhOX0aj+ZAP+kfTaLnRajLgUUxF10vn6SvJKi7FHTNDBkS+CIVlE5r+ZQnu9PSbemY7L8JnlKjTFWV9di8p0vst2irYxhZxvS9qki2S7tR41fNdLE5LWuWNA1M7DqMmDMjqQXTe6A/ZyKAN+InwtN1eq+dSUPq0U5VSs9VyCH08qabWY86JlxNuRxuU88eBXnxBBHylrBEUlwR5EGPGIeKKKFgSikYowFFGigAojFGgAxkDJmQMYA2g2hWgmgAFhBVDNBQA4vT45pYsQlbTpL+MSmyVsmiASwjQEJjkGy7GHZoyvzGuQ3cxKRa4mxpnnmftGGXC+oYW+szFxRI24cQ/oqR154a/RZ6Lpnnnf8T9QWzKvFKijyPeN8eYmnA7dGXMqRxuJxwaHQD0/wBR+JsQLHljXQSeEgBb8CxNeoqCbo3mWArxm0ykj19FX9/DpEei35RN1b4D8PKExpYUekTGlbLvZQt7mn2niJbFXm3/AOT+R/YlDs7hqnQ4HB6yqUtl8Y6oy82IjPS9Sgo+tEflOlx6DSfyzhxlGoKHaxY7N9f2hKq+lsDV9TM59CzZkcUVAIPmOtfG7+6bbqKoCRlLqiyMLTs5Ds7SEEl1K8jaC24+Ngnx8OZ12nYBKAPT8o2DQgmz/iSOZFO5yqLdDcwBY+gkJU+yyKcUZWs7Jz+4fVLWxGA5ZV+04TiweBuF3U5XtPXs6ITwwdiD8AOfqRO812FGUhDwwIZRdEeRvr8PjOJ9qtCEOMr9kqw+BBF/cRJYnFtUVZlJJ7On/h121Tvp2Ne8vIgI7wyAf1FAHCqdpaqHQT0nDPEtWzYm02qSymQJk6mjmxnZmUsfEshPjw89n0OpXIqZENo6hlPoRcWWO7+SqL9GiIoymPKiY9xXGiuAqHuK41xQCh40VxXAQoorjXGAjIGSMi0LHRBoJoRoNo7ECaDhGgowOcTFDBZNFhQswcy2kANwmOEKSNVDlZbj7EXkd/MgTIHrA1UaODJU4j+JTb8uMbl7qEkAEMAW4s9DZBr4TqlyVOH9uc499V8+7S/TvN9P/c1eM7kZPJjUbOVQfgPTqD9IM3u/6h+6kmFL8x9wH6yNeP8AzfnOic8mR9r9+ELp1vaOl/v9IM9T6j8h+sJpcW/atgWeCfnE+hx7Roolc/WaGmzyllpKTcCQKNcwmnaUM1x0dJo9RNRGBnL6d6mvp9RK5FsTZDhRMPVYFc1tVjZItQxW+tE9JY1Gr4oc+g/KU1fMwBROPHldw9SCfugl7CT9FnT4AHDOtEAgNZ6HwAuh8fHiZvtMq7FY9FyoT/tNhvhxC/zWQEh0ZRdbiOD5GZ/tRqP6IHizAfQE/lHBfUiGR/SzQ0nZ/vdNrND/AH6XK+XAD3mK82igf6gOvm44m9/DPtHfpjjLEnE5AuvsP3lrxq9wnO6TWPi7UOUbtjtiDkUF258alCx6Vuo347Ze7FxjRdp5MfIx5XbGnBoMSjotnqAHC35mWTVpr9TPHTX7HpoMe4FW4kt0y2W0EuKQ3R7hYqJXHuQuK47CiVxXI7orhYqJXGuR3Rt0AokTIMYi0YmAUMTBsY7NBsY7Ag5grknMHcdiozESHVIlSGRZzWyREJIviMtKknkTiOPZZj7Md0qBJlzUmZrvzLDanoIzzzb2hcnPlLHkuR/0qo21PQWech7a4VDI4bvFSCteAPBv4kzV4rqVfJm8qNwv4Occ2OOkiy8EfvqYgeB8j99Rm4r4kfWdE5olPAP1hegErjmwPOx4/wCYd+vy/f4RPoa7CKlG5bwZqgsS2I7JKWXrRpYs0u4dVUwFYiGTORIuJYpHSpkB8Y7+9u0cj48zEw6yvGXk7R4kXZJNFw6vNRRypB9BOX9oNXucIDwvX/cf0BH3zbfXKx2l1RmVtpb7O4KSoY/2gmhZ85z3aenakzMbGUMDwBtfH3WU+tbTfjZk8a3bKs0rVI7XSdgnOmRxff0OmZWIv+qi2KA6H+lVeTjzhcWpTUavSNkYvvwK+xiRtzYwSGpeBexuP+UX4To/YfU79DgbxVSh+KMUH3ATh9XpVx5tQyoRk02rGTuEm9O7bjfPNcfDcQYlK3JP0Rqqfyeqq8mGmamqBA9flLGPLcycjS4lwNFugg8XvIchUGuK4LdFujsVBN0W6C3xbocg4hbiuAOWIZI7FQYtIMZBng3ygQsVE2aDZoFtQIM5xHYcQrtB7oB9QIP34jsfEOsMsGohBOcVk1MWbJQjAwOpPEceyyD2ZmszcyncfUnmDBlqNyE05X21/wDrHnfh5V4/OdVMr2n0yvp2Y9UpgfnVfePpL8EqmirPHljZwadfp95HWRBHe56HjjrzzC6Fd7FT0CMxNXwikgV8hAacdfhOocqtWNi+0fh+kPlPj6fnB6YsWAUWT3R6knj4SwRfd44PXx+sTBItaOWs2CvhKemNTQd+7KX2aY9FYYYJ0IlpGuECr4xWOimmNj4SGow5LCoGYkHgCzxXI+s0hXgJr9k6NAmTU5Fbai1jauN5IVSpvlgxHBFUDzxJJ0Kr0cZj0rsjuAf6e0v6Bm27iSeu4qK9fSbfZOH32DJpWWsjVn05PG5gveUX4MoNV4gyuzsEyLtG7J1cMytRZWZGHRlJUHz9Z0GDLpsmlxI2Rl1GBf6bhG7rA7lUEcEXXJ8eYSlohHG3Kl3/ACG/hr25QOkYHqzofLjvKR4CxfxJmzr9IV1h1CtQfEEdQv8AcmwKS3mefpONz9m5cjrmwELmrc4SsY3+DJZoEjkjjm64M3tP2vqy2NNRgADMEbJto30u1YqbJBPA4HAlOWDdyj7Wy6KeOSjNbRtDMZpaTLMrIlQ2lczGma3E2my8QH8zzK2TLxKbvzcEyPHRtLqRE2pExhnjHOY2wUDZGpEdtRMI6mTXU3HehcNl/Nqo2LVzOd4IvUIsbgbbariUs+slA5jBu0GwUEEfVm+sZtbxKGRoJ34k0yLRabXG4v5uZjGLdJEaO9QQoSDxmWEE55QiISB1KcS8qwGqTiNE4LZzWqXmAlvVjmVWBlqN3oiDMD2v1lIMQBtu8etBVI/P8J02l0pc9QoHVm6D9T6QXauh0VOSr5HZNm4tsUC74VfXzJmjBF8lKtIzZ5ri4p7Z5n2aTbgAndjZePM1XPxEIdMQAoWiQNxJvcbNkeXhN06RV+yoAHkPxjHECRNznsrxeMp4pSva/gzex9ARlQvwAw52769dh+18DLGv7O91kdLsAnaehKg0CR4HggjzBlplrgiaR1SahNmVkR14TIUJLWRSd0gAA3ZN/a4FjlOTKFBHO4MXB4lvAgIqaX/wmVE94VtN+w0bIehuUgXyDan1Bj6XsrMzJtxOd5YL3SASt7hZ4BFH6RMmlRk+45kkw2QOpJoAc2T4Cb3/AMIAmPJkyoiZN3J3MysoPdKAEk2K4i1GqwBEOmxAMyVkOQFyrWCCm6wrcXuHp6xDoDpeySjXqA2LGrIrlu6/fvaVDCiLAs+Avp1gu09eGHusdjChAWyCXKbguRgAACQfwJJNmD12V8zB8jbmChQTXAHgPKRTTjxjC/SKHuy3J4X8YVaA4H78IbMPCQUcwNOBcISy+1pfmy7ochXm+fOa6a5gLBMxsIl1IWY+3bNjT6oOOeGHXyI8xDIamNgba4PyPzmvRExZYqMtezbik5R36JvkgGeRYyJlRaP7yS3SK44zpUYEHaTxQPjLGKJ9CXZNoBzDZJVdoRHIfdGZ5C4xMnREFlMAzcQmUyuxkkQYN2kbkXaNcnRA9JwS2iyWHTy2mICczkU0Dx4rhMujsS3hSW6k4qws43X9m0blF8IHWdnrtPYoCcb7WE4sRNUWIUfOyfuBmiEW2kXLLUdmBre0b7q8KOkznykyn7y5IPOklSpGXt2EZIBRVejfnDo9wV3u+MTOj4C5SlH5TLrID1EC+FfKGRwY+2BilBxfGS2gKl12hMjoEbcoViArXdhenWGy6rM2NcTZXKISwUHb3iSbJXk9TX/oUxSMRAVgPddPGulm6vrJhJMmTWMAQSJzCkQLm/h++kRZixSyyUYrZXKWfkYJW5J9fw4l/wDlnKlgr7FF7tp214kt0/xMp3o/En7jUE9m7y8UcOBQTvezQxGWUaUsBlkGDOYgmR50rr4zlepA8yB9Z2LJMud9GnB7M15AGEzioECZy8MjCRcwYiMdgPtk1NSKyVRiHcylkMtOZTcwSCTEpiaMDGLSRADmMquZYzGVHMsiQkwbmK5BzGuTIHtiIITbBqakrnEtpFYZGllHlJYbHLccmBZaee/xPelwp5l2/wC0KB/5GegqZ5t/FZ/6mn/2P/5LOjglbQpdHDI0kWgw0Z2m1kUFxZeSIfS4tzKL2gsNzHooY1Z+sy8WTlvgB+M2+ysBcOgDHgG1ANbbJ4PWlJNXcGdL/nUuUn+QJ7RmANhTW4dCLIB+dSxjzAzoHZFKJp8O8Mu/MhBfcinbQZzzyGNjxoeBvM7Y7Kx7Pf6Z2OM1aN9pDZB+Ivb/AN3jImrKsealJNP0/wCytug8j1K+RMqHayEGga68EWDx++sC+ov0/fwjMkvBn91poO2XmEXJKYf0v75a0WlfK6ooALkhSxpTV3z8j9KhYQ8CXcmkv3J3fWafZXZ6sfe5gRhRGdh4uBW1R6MSK+HrCdk9n4g2RdQy9zcu67QkWCFFd5+lD7pdxaZsyFMjNRG1RsVChxEAKQOCNrjjj8IjclDFFxhrq37d/BHtLVK+La6vivIjtj5N4GBVmTgWOtiuvM4dqL0DYQsL8+9wfpz852mbUgvepLFwAihbChF717k6MxPXwA9eOOzveRyVKksSVPG0n+34Dp8o0YfMVQS/H9C3ihxK2GWVETMBLD9tP9y/iJ1zPOSwfbX/AHD8ROnc8TJ5HaNWDplZzZi2xwvMKV4lFl1FUyLGTeBMYgiyZMEsm0EALJkleSyCQEsRBsTmC3ybGAYySRFsbKZVaTd4B2k4orbB5DIbpHIY1yyiNnuVyQjRTjIgTAh8ceKOIBlM8y/iy39XAPJHP1cfoYopt8X7aE+jhlMTmKKdFkUUXamHqQD9Z1XYGdkBPfKuHXaigk7l2sb60ADx6CPFBm7w/syNc48m1MqOAdgQZUu2Qkja2Nhw1kjjmxJdmk2+mxqqBl3bsw3tW1OK+yCQfLjnyiiiNsdxd/6iOj7O3Yg3Kq/vMZ2vY3L1dDXANdBweRMx9I3OIIqbVrI5I/qUf6bICCQ3W68Cb6RRQHGTcnfyWdPkdaDIW34yoVBjRgqMLYkXZ3KK6XC48SZMfeyDarMgL49jqQwarVuh3A157vmoohptvWiABb3S42DOhBCWoCCwaN1fe6k+flNJNRqHKKdiMxyZLIBIBCIOOfSrv7oooEptatfJQ1muVlxDKC6rlZcqpwXZFpGFUKO66HXaZyR5dzRFseG6geAPqOkUUkjB5qpRr8S9hWWIoojALGe8vxH4zoHJMeKZc/aNODpj4khX4iimV9mkpuYExRSRFklMcmPFACtkgmMUUtRW+wTGQaKKSIsqvAtFFLEVlfIJCKKTIM//2Q==" style="
+                        height:100%;width:100%;
+                        ">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    position:relative;
+                    ">
+                        <img src="image/images (3).jpg" style="
+                        height:100%;width:100%;
+                        ">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                    
+                    <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                        height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                        "></div>
+                    <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                    <p style="
+                    font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                    ">This is the name of the video</p>
+                    <p style="
+                    margin-top:0px;margin-bottom:5px;
+                    ">33M views . 2 years ago</p>
+                    <p style="
+                    margin-top: 0px;margin-bottom: 0px;
+                    ">Kalu Henry</p>
+                    </div>
+                    
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    position: relative;
+                    ">
+                        <img src="image/images (2).jpg" style="
+                        height:100%;width:100%;
+                        ">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+
+                    <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    position: relative;
+                    ">
+                        <img src="image/images.png" style="
+                        height:100%;width:100%;
+                        ">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    position:relative;
+                    ">
+                        <img src="image/images (11).jpg" style="height:100%;width:100%;">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    position:relative;
+                    ">
+                        <img src="image/download (1).jpg" style="height:100%;width:100%;">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="position:relative;margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    ">
+                        <img src="image/download (2).jpg" style="height:100%;width:100%;">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="position: relative;margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    ">
+                        <img src="image/download (3).jpg" style="height:100%;width:100%;">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="position: relative;margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    ">
+                        <img src="image/download.jpg" style="height:100%;width:100%;">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="div-1">
+                    <div style="position:relative;margin-bottom: 5px;
+                    display:block;height:60%;border: 1px solid black;width: 100%;
+                    ">
+                        <img src="image/images (1).jpg" style="height:100%;width:100%;">
+                        <p class="video-time">1:30:45</p>
+                    </div>
+                    <div style="
+                    display:grid;height:38%;border: 1px solid black;width:100%;grid-template-columns: 20% 80%;
+                    ">
+                        <div style="border-right: 1px solid black;height:100%;background-color:rgb(235, 229, 229);"><img src="image/images (12).jpg" style="
+                            height: 50%; width: 80%;border-radius: 60%;margin-top: 6px;margin-left: 6px;
+                            "></div>
+                        <div style="background-color: rgb(235, 229, 229);padding-left: 5px;height:100%;">
+                        <p style="
+                        font-weight:bold;margin-top: 0px;margin-bottom: 5px;
+                        ">This is the name of the video</p>
+                        <p style="
+                        margin-top:0px;margin-bottom:5px;
+                        ">33M views . 2 years ago</p>
+                        <p style="
+                        margin-top: 0px;margin-bottom: 0px;
+                        ">Kalu Henry</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>     
+
+            <footer>
+                <div class="social-media-links">
+                    <a href="https://www.facebook.com/login" style="
+                    border: 1px solid white;height: 40px;flex:1;
+                    " target="_blank">
+                        <img src="image/facebook-logo.png" style="height:100%;width:100%;">
+                    </a>
+                    <a href="https://www.twitter.com/login" style="
+                    border: 1px solid white;height: 40px;flex:1;margin-left: 10px;margin-right:10px;
+                    " target="_blank">
+                        <img src="image/twitter-icon.png" style="height:100%;width:100%;">
+                    </a>
+                    <a href="https://www.instagram.com/login" style="
+                    border: 1px solid white;height: 40px;flex:1;
+                    " target="_blank">
+                        <img src="image/instagram-icon.png" style="height:100%;width:100%;">
+                    </a>
+                </div>
+                <center>&copy; Copyright 2023. King Henry's Website </center>
+            </footer>
+        <script src="jsfile.js"></script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(186, 150, 219);
+    font-family: sans-serif;
+}
+.main{
+    background-color: whitesmoke;
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 23rem 25rem;
+    column-gap: 3rem;
+    margin: 2rem auto 5rem;
+    width: 60rem;
+    height: 35rem;
+    padding: 1rem;
+    box-shadow: 0.2rem 0.2rem 1rem grey;
+}
+.left-content{
+    background-color: rgb(74, 15, 129);
+    padding-left: 3rem;
+    padding-top: 3rem;
+
+}
+.form-info{
+    background-color: whitesmoke;
+    margin-top: 3rem;
+}
+label{
+    font-weight:bold;
+}
+#email{
+    padding-left: 0.7rem;
+    font-weight:600;
+    height: 2rem;
+    width: 26rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+#fname{
+    padding-left: 0.7rem;
+    font-weight:600;
+    height: 2rem;
+    width: 26rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+#pwd{
+    padding-left: 0.7rem;
+    font-weight:600;
+    height: 2rem;
+    width: 26rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.span{
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-weight:bold;
+    color: grey;
+}
+.submit-button{
+    width: 26.4rem;
+    height: 2.5rem;
+    background-color: rgb(82, 18, 141);
+    border: 1px solid rgb(70, 13, 122);
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 0.2rem 0.2rem 1rem grey;
+}
+.header{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: normal;
+    
+}
+.paragraphs{
+    color: rgb(221, 218, 218);
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+.div-1{
+    margin-bottom: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.div-2{
+    margin-bottom: 3rem;
+}
+.div-3{
+    margin-bottom: 3rem;
+}

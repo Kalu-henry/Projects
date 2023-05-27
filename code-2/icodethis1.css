@@ -1,0 +1,145 @@
+body{
+    background-color:rgb(1, 1, 43) ;
+}
+main{
+    background-color:rgb(4, 4, 80) ;
+    height: 35rem;
+    width: 60rem;
+    padding: 0.8rem;
+    margin: 3rem auto 3rem auto;
+    display: grid;
+    grid-template-columns: 29rem 29rem;
+    column-gap: 2rem;
+    border-radius: 10px;
+}
+.div-1{
+    color: white;
+    padding: 2rem;
+}
+.help-info-header{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.help-info-para{
+    font-size: 0.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1;
+}
+.div-2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    padding-left: 1rem;
+}
+.p1{
+    font-size: 0.8rem;
+    font-weight: lighter;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.div-3{
+background-color:rgb(1, 1, 43) ;  
+width: 14rem;
+height: 2rem;
+margin-bottom: 2rem;
+border-radius: 30px;
+padding: 0.5rem;
+display:flex;
+justify-content: space-between;
+align-items: center;
+}
+.Monthly-button{
+ background-color:rgb(4, 4, 80) ;
+ color:white; 
+ width: 7rem;
+ border: 1px solid rgb(4, 4, 80) ;
+ border-radius: 20px;
+ height: 2rem;
+ cursor: pointer;
+transition: background-color 1s, color 1s, font-weight 1s;
+}
+.Monthly-button:hover{
+    color: white;
+    background-color:  rgb(1, 1, 43) ;
+    font-weight: bold;
+}
+.One-time-button{
+ background-color: rgb(1, 1, 43) ; 
+ color:white;
+ width: 7rem;
+  height: 2rem;
+ border-radius: 20px;
+ border: 1px solid rgb(1, 1, 43);
+ border-style: none;
+cursor: pointer;
+transition: background-color 1s, color 1s, font-weight 1s;
+  
+}
+.One-time-button:hover{
+    color: white;
+    background-color: rgb(4, 4, 80);
+    font-weight: bold;
+}
+.price-button{
+    background-color: rgb(4, 4, 80);
+    color: white;
+    width: 3rem;
+    height:1.7rem;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    transition: background-color 1s, color 1s, font-weight 1s;
+}
+.price-button:hover{
+    color: black;
+    font-weight: bold;
+    background-color: white;
+}
+.check-me{
+    background-color: rgb(4, 4, 80);
+    margin-top: 2rem;
+    margin-right: 0.5rem;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 2rem;
+}
+.terms-para{
+    display: inline-block;
+    margin-bottom: 2rem;  
+}
+label{
+    font-size: 0.7rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#fname{
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
+    background-color: rgb(4, 4, 80);
+    color:white;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 0.8rem;
+    height: 2.5rem;
+    width: 23rem;
+}
+#fname::placeholder{
+    color: white;
+    opacity: 1;
+    font-weight: normal;
+    font-size: smaller;
+}
+.giving-link{
+    text-decoration: none;
+    font-size: smaller;
+    font-weight: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.donate-button{
+    margin-top: 3rem;
+    height: 3rem;
+    text-align: center;
+    width: 12rem;
+    background-color: rgb(32, 78, 178);
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+}
