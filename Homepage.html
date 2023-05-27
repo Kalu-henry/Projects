@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Homepagestyles.css">
+    </head>
+    <title>Home</title>
+    <link rel="Icon" type="Image/x-icon" href="image/drM.png">
+    <body>
+        <div class="header">
+            <div class="head-content">
+                <img src="image/drM.png" class="iykes-logo">
+            </div>
+                <div class="next-page-links">
+                    <button class="but-1">
+                        <a href="Homepage.html" target="_self" class="homepage-link">HOME</a>
+                    </button>
+                    <button class="but-2">
+                        <a href="Aboutpage.html" href="_self" class="aboutpage-link">ABOUT</a>
+                    </button>
+                    <button class="but-3">
+                        <a href="educationpage.html" target="_self" class="educationpage-link">EDUCATION</a>
+                    </button>
+                    <button class="but-4">
+                        <a href="contactpage.html" target="_self" class="contactpage-link">CONTACT</a>
+                    </button>
+                    <button class="but-5" onclick="showDropdown()">
+                        <img src="image/hamburger-icon.png" class="ham-burger-menu">
+                    </button>
+                </div>
+        </div>
+        
+        <div class="dropdown-menu" id="dropdown">
+            <a href="Homepage.html" target="_self"><button class="dropdown-but">Home</button></a>
+            <button class="exit-button" onclick="exitDropdown()"> X </button>
+            <a href="Aboutpage.html" target="_self"><button class="dropdown-but">About</button></a><br>
+            <a href="educationpage.html" target="_self"><button class="dropdown-but">Education</button></a><br>
+            <a href="contactpage.html" target="_self"><button class="dropdown-but">Contact</button></a><br>
+        </div>
+            <script>
+                function showDropdown(){
+                    document.getElementById("dropdown").style.display = "block";
+                }
+                function exitDropdown(){
+                    document.getElementById("dropdown").style.display = "none";
+                }
+            </script>
+        
+        <div class="first-main">
+            <div class="image-slideshow" style="border-style: none;">
+                <img src="image/Dr Mikey 3.jpg" style="height: 760px;;width:100%;">        
+            </div>
+            <div class="a-little-content">
+                <h1 class="his-name">Dr. Michael Kalu</h1>
+                <h1 class="his-job">OBSTETRICS AND GYNAECOLOGY</h1>
+                <h1 class="his-titles">Bachelor of Medicine, Bachelor of Surgery. (MB.BS)</h1>
+                <p class="text-about-him">Dr. Michael Kalu graduated from Nnamdi Aziliwe University Teaching Hospital,
+                </p>
+                <p class="text-about-him">
+                    under Nnamdi Azikiwe University, Awka on the 25th of March, 2023.
+                </p>
+                <p class="text-about-him">Dr. Michael Kalu, is a calm and introverted young man that loves reading,</p>
+                <p class="text-about-him">watching footbal games and movies that are related to his field of study.</p>
+                <p class="text-about-him">He is a goal-driven young man, that believes that hardwork is the bedrock</p>
+                <p class="text-about-him"> of any success story.</p>
+                <a href="Aboutpage.html" target="_self">
+                    <button class="learn-more-button">LEARN MORE</button>
+                    </a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="social-media-handles">
+                <h1 class="ob-article">OBSTETRICS</h1>
+                <p class="p-article">Obstetrics is the field of medical study concentrated</p>
+                <p class="p-article"> on pregnancy, childbirth and the postpartum</p>
+                <p class="p-article"> period.</p>
+                <p class="p-article">As a medical speciality, Obstetrics is</p>
+                <p class="p-article">combined with Gynaecology under the</p>
+                <p class="p-article">discipline known as Obstetrics and Gynaecology (OB/GYN),</p>
+                <p class="p-article">which is a surgical field.</p>
+                
+            </div>
+            <div class="copyright-info">
+                <h1 class="ob-articlec">OBSTETRICS</h1>
+                <p class="p-articlec">Obstetrics is the field of medical study concentrated</p>
+                <p class="p-articlec"> on pregnancy, childbirth and the postpartum</p>
+                <p class="p-articlec"> period.</p>
+                <p class="p-articlec">As a medical speciality, Obstetrics is</p>
+                <p class="p-articlec">combined with Gynaecology under the</p>
+                <p class="p-articlec">discipline known as Obstetrics and Gynaecology (OB/GYN),</p>
+                <p class="p-articlec">which is a surgical field.</p>
+            </div>
+            <div class="info-about-dev">
+                <h1 class="ob-article">OBSTETRICS</h1>
+                <p class="p-article">Obstetrics is the field of medical study concentrated</p>
+                <p class="p-article"> on pregnancy, childbirth and the postpartum</p>
+                <p class="p-article"> period.</p>
+                <p class="p-article">As a medical speciality, Obstetrics is</p>
+                <p class="p-article">combined with Gynaecology under the</p>
+                <p class="p-article">discipline known as Obstetrics and Gynaecology (OB/GYN),</p>
+                <p class="p-article">which is a surgical field.</p>
+            </div>
+        </footer>
+
+        <div class="container-for-icons-to-be-displayed">
+            <a href="Homepage.html" style="height: 100%;">
+                <button class="home-button-bottom" title="Home">
+                    <img src="image/another-home-icon.png" style="height: 100%; width: 100%;">
+                </button>
+            </a>
+            <a href="Aboutpage.html" style="height: 100%;">
+                <button class="about-button-bottom" title="About">
+                    <img src="image/about-me-icon.png" style="height: 100%; width: 100%;">
+                </button>
+            </a>
+            <a href="educationpage.html" style="height: 100%;">
+                <button class="education-button-bottom" title="Education">
+                    <img src="image/education-icon.png" style="height: 100%; width: 100%;">
+                </button>
+            </a>
+            <a href="contactpage.html" style="height: 100%;">
+                <button class="contact-button-bottom" title="Contact">
+                    <img src="image/contact-icon.png" style="height: 100%; width: 100%;">
+                </button>    
+            </a>
+        </div>
+    </body>
+</html>

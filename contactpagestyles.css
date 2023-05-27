@@ -1,0 +1,221 @@
+body{
+    padding-top: 70px;
+    background-image: linear-gradient(130deg,  rgb(8, 43, 54), #f3eeee);
+}
+.header{
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 50px;
+    background-color: rgb(8, 43, 54);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+.head-content{
+    height: 50px;
+    margin-left: 10px;
+}
+.iykes-logo{
+    height: 50px;
+    width: 100%;
+}
+.next-page-links{
+    margin-left: 457px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+.but-1{
+    height: 100%;
+    width: 110px;
+    border-style: none;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(8, 43, 54);
+}
+.but-2{
+    border-style: none;
+    height: 100%;
+    width: 110px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(8, 43, 54);
+}
+.but-3{
+    border-style: none;
+    height: 100%;
+    width: 130px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(8, 43, 54);
+}
+.but-4{
+    margin-right: 30px;
+    border-style: none;
+    height: 100%;
+    width: 110px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(8, 43, 54);
+}
+.but-5{
+    height: 100%;
+    border-style: none;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(8, 43, 54);
+    margin-right: 10px;
+     display: none; 
+}
+.ham-burger-menu{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(8, 43, 54);
+}
+footer{
+    margin-bottom: 20px;
+    height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+.social-media-handles{
+    height: 100%;
+    border: 2px solid black;
+}
+.copyright-info{
+    height: 100%;
+    border: 2px solid black;
+}
+.info-about-dev{
+    height: 100%;
+    border: 2px solid black;
+}
+.container-for-icons-to-be-displayed{
+    display: none;
+}
+@media screen and (max-width: 550px){
+    body{
+        padding-bottom: 90px;
+    }
+    .header{
+        width: 100%;
+    }
+    .next-page-links{
+        margin-left: 220px;
+        padding-right:0px;
+    }
+    .but-5{
+        display: block;
+        margin-right: 0;
+    }
+    .but-1, .but-2, .but-3, .but-4{
+        display: none;
+    }
+.container-for-icons-to-be-displayed{
+    display: block;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: blue;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.home-button-bottom{
+    height: 100%;
+    width: 100px;
+    border: 2px solid black;
+}
+.about-button-bottom{
+    height: 100%;
+    width: 100px;
+    border: 2px solid black;
+}
+.education-button-bottom{
+    height: 100%;
+    width: 100px;
+    border: 2px solid black;
+}
+.contact-button-bottom{
+    height: 100%;
+    width: 100px;
+    border: 2px solid black;
+}
+}
+.homepage-link{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.aboutpage-link{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.educationpage-link{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.contactpage-link{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.contact-information{
+    height: 300px;
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 30px;
+}
+.twitter-img{
+    height: 30px;
+    width: 30px;
+}
+.facebook-img{
+    height: 30px;
+    width: 30px;
+}
+.instagram-img{
+    height: 30px;
+    width: 30px;
+}
+.twitter-class{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.facebook-class{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.instagram-class{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.contacts{
+    font-size: 2vw;
+    font-weight: bold;
+    text-align:center;
+}

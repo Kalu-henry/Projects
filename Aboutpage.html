@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Aboutpagestyles.css">
+    </head>
+    <title>About</title>
+    <link rel="Icon" type="Image/x-icon" href="image/drM.png">
+    <body>
+        <div class="header">
+            <div class="head-content">
+                <img src="image/drM.png" class="iykes-logo">
+            </div>
+                <div class="next-page-links">
+                    <button class="but-1">
+                        <a href="Homepage.html" target="_self" class="homepage-link">HOME</a>
+                    </button>
+                    <button class="but-2">
+                        <a href="Aboutpage.html" href="_self" class="aboutpage-link">ABOUT</a>
+                    </button>
+                    <button class="but-3">
+                        <a href="educationpage.html" target="_self" class="educationpage-link">EDUCATION</a>
+                    </button>
+                    <button class="but-4">
+                        <a href="contactpage.html" target="_self" class="contactpage-link">CONTACT</a>
+                    </button>
+                    <button class="but-5" onclick="showDropdown()">
+                        <img src="image/hamburger-icon.png" class="ham-burger-menu">
+                    </button>
+                </div>
+        </div>
+
+        <div class="dropdown-menu" id="dropdown">
+            <a href="Homepage.html" target="_self"><button class="dropdown-but">Home</button></a>
+            <button class="exit-button" onclick="exitDropdown()"> X </button>
+            <a href="Aboutpage.html" target="_self"><button class="dropdown-but">About</button></a><br>
+            <a href="educationpage.html" target="_self"><button class="dropdown-but">Education</button></a><br>
+            <a href="contactpage.html" target="_self"><button class="dropdown-but">Contact</button></a><br>
+        </div>
+
+        <script>
+            function showDropdown(){
+                document.getElementById("dropdown").style.display = "block";
+            }
+            function exitDropdown(){
+                document.getElementById("dropdown").style.display = "none";
+            }
+        </script>
+
+        <div class="image-slideshow">
+            <div class="img-1">
+                <img src="image/Dr Mikey 1.jpg" style="height: 100%;width: 100%;">
+            </div>
+            <div class="img-2"> 
+                <img src="image/Dr Mikey 2.jpg" style="height: 100%;width: 100%;">
+            </div>
+            <div class="img-3">
+                <img src="image/Dr Mikey 3.jpg" style="height: 100%;width: 100%;">
+            </div>
+        </div>
+
+        <h1>ABOUT ME</h1>
+        <div class="real-info">
+            <div class="img-for-iyke">
+                <img src="image/Dr Mikey 6.jpg" style="height:250px; width: 250px;">
+            </div>
+            <div class="info-for-him-iyke">
+                <img src="image/drM.png" style="height: 250px; width: 70%;opacity: 0.5;">
+                <div class="text-of-iyke">
+                    <p class="p1">Hello there, My name is Ikechukwu Michael Kalu.</p>
+                    <p class="p2"> I am from Arochukwu local government in Abia State, Nigeria.</p>
+                    <p class="p3">I am 26 years old, fair in complexion, and 6 foot tall.</p>
+                    <p class="p4">I am the first child amongst the six children of my parents.</p>
+                    <p class="p5">My position in the family is one of the reasons I am so goal-driven,</p>
+                    <p class="p6">focused and determined to reach my goals. </p>
+                    <p class="p7">I love playing video games, chess and watching movies of all genres.</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="enough-about-him">
+            <div class="info-1">
+                <div clas="info-1-2">
+                    <img src="image/ben-carson.jpg" style="height: 232px; width: 100%;" title="Dr. Ben Carson">
+                </div>
+                <div class="info-1-3">
+                    <p>This man is one the major reasons I decided to study medicine.</p>
+                    <p>I always loved reading his books, and the fact that he got<br> to this point</p>
+                    <p>of being recognised worldwide, I so thought that I could also achieve such</p>
+                    <p>great feat with hardwork, resilience, determination and focus.</p>
+                </div>
+            </div>
+            <div class="info-2">
+                <div clas="info-2-2">
+                    <img src="image/chess-image.jpg" style="height: 232px; width: 100%;" title="Chess Masters">
+                </div>
+                <div class="info-2-3">
+                    <p>I am a gamer, but I developed special love for chess in my first year as a medical student. </p>
+                    <p> A few of my friends as at that time introduced the game to me, of course I was a fish at that time.</p>
+                    <p> But the reverse is the case now, I am not a chess Grand Master like Magnus Carlsen, but I can assure you I am a tough nut to crack. </p>
+                </div>
+            </div>
+            <div class="info-3">
+                <div class="info-3-2">
+                    <img src="image/tennis-players.jpg" style="height: 232px;width: 100%;" title="Table Tennis Players">
+                </div>
+                <div class="info-3-3">
+                    <p>Right from my secondary school days, I have been very good in this sport.</p>
+                    <p>I proved my worth once more in the university amongst my dear friends.</p>
+                    <p>Playing with them was fun, but winning was more fun.</p>
+                </div>
+            </div>
+            <div class="info-4">
+                <div class="info-4-2">
+                    <img src="image/video-games.jpg" style="height: 232px; width: 100%;" title="Video Games">
+                </div>
+                <div class="info-4-3">
+                    <p>Another thing I love doing other than reading, playing chess, table tennis and watching movies, is playing video games.
+                        Preferrably fifa.
+                    </p>
+                    <p>This helps me calm down and ease of the stress of the day. This is one of the many things I can beat my chest and say that I am good at.</p>
+                </div>
+            </div>
+        </div>
+       
+        <footer>
+            <div class="footer-div1">
+                <h1 class="ob-article">OBSTETRICS</h1>
+                <p class="p-article">Obstetrics is the field of medical study concentrated</p>
+                <p class="p-article"> on pregnancy, childbirth and the postpartum</p>
+                <p class="p-article"> period.</p>
+                <p class="p-article">As a medical speciality, Obstetrics is</p>
+                <p class="p-article">combined with Gynaecology under the</p>
+                <p class="p-article">discipline known as Obstetrics and Gynaecology (OB/GYN),</p>
+                <p class="p-article">which is a surgical field.</p>
+            </div>
+            <div class="footer-div2">
+                <h1 class="ob-articlec">OBSTETRICS</h1>
+                <p class="p-articlec">Obstetrics is the field of medical study concentrated</p>
+                <p class="p-articlec"> on pregnancy, childbirth and the postpartum</p>
+                <p class="p-articlec"> period.</p>
+                <p class="p-articlec">As a medical speciality, Obstetrics is</p>
+                <p class="p-articlec">combined with Gynaecology under the</p>
+                <p class="p-articlec">discipline known as Obstetrics and Gynaecology (OB/GYN),</p>
+                <p class="p-articlec">which is a surgical field.</p>
+            </div>
+            <div class="footer-div3">
+                <h1 class="ob-article">OBSTETRICS</h1>
+                <p class="p-article">Obstetrics is the field of medical study concentrated</p>
+                <p class="p-article"> on pregnancy, childbirth and the postpartum</p>
+                <p class="p-article"> period.</p>
+                <p class="p-article">As a medical speciality, Obstetrics is</p>
+                <p class="p-article">combined with Gynaecology under the</p>
+                <p class="p-article">discipline known as Obstetrics and Gynaecology (OB/GYN),</p>
+                <p class="p-article">which is a surgical field.</p>
+
+            </div>
+        </footer>
+
+        <div class="container-for-icons-to-be-displayed">
+            <a href="Homepage.html" style="height: 100%;">
+                <button class="home-button-bottom" title="Home">
+                    <img src="image/another-home-icon.png" style="height: 100%; width: 100%;">
+                </button>
+            </a>
+            <a href="Aboutpage.html" style="height: 100%;">
+                <button class="about-button-bottom" title="About">
+                    <img src="image/about-me-icon.png" style="height: 100%; width: 100%;">
+                </button>
+            </a>
+            <a href="educationpage.html" style="height: 100%;">
+                <button class="education-button-bottom" title="Education">
+                    <img src="image/education-icon.png" style="height: 100%; width: 100%;">
+                </button>
+            </a>
+            <a href="contactpage.html" style="height: 100%;">
+                <button class="contact-button-bottom" title="Contact">
+                    <img src="image/contact-icon.png" style="height: 100%; width: 100%;">
+                </button>    
+            </a>
+        </div>
+
+    </body>
+</html>
